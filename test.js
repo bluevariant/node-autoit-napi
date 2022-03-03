@@ -15,16 +15,28 @@
 // console.log(isVisible);
 
 const autoit = require("./index");
+const titleBuilder = autoit.titleBuilder;
 
 async function main() {
+  const props = {
+    // [CLASS:Notepad]
+    classNotepad: titleBuilder().class("Notepad").build(),
+    // [TITLE:Notepad]
+    titleNotepad: titleBuilder().title("Notepad").build(),
+    // [CLASS:Edit]
+    ctrlClassEdit: titleBuilder().class("Edit").build(),
+    // [CLASS:Button; INSTANCE:2]
+    ctrlClassButton2: titleBuilder().class("Button").instance(2).build(),
+  };
+
   await autoit.init();
   await autoit.run("notepad.exe");
-  await autoit.winWait("[CLASS:Notepad]");
+  await autoit.winWait(props.classNotepad);
   await autoit.send("Hello, autoit & nodejs!");
 
   const isVisible = await autoit.controlCommand(
-    "[CLASS:Notepad]",
-    "[CLASS:Edit]",
+    props.classNotepad,
+    props.ctrlClassEdit,
     "IsVisible",
     {
       text: "",
@@ -33,12 +45,12 @@ async function main() {
 
   console.assert(isVisible === "1", isVisible);
 
-  await autoit.winClose("[CLASS:Notepad]");
-  await autoit.winWaitActive("[TITLE:Notepad]");
-  await autoit.controlClick("[TITLE:Notepad]", "[CLASS:Button; INSTANCE:2]");
-  await autoit.winWaitClose("[CLASS:Notepad]");
+  await autoit.winClose(props.classNotepad);
+  await autoit.winWaitActive(props.titleNotepad);
+  await autoit.controlClick(props.titleNotepad, props.ctrlClassButton2);
+  await autoit.winWaitClose(props.classNotepad);
 
-  console.assert(!(await autoit.winExists("[CLASS:Notepad]")));
+  console.assert(!(await autoit.winExists(props.classNotepad)), "winExists");
 }
 
 main().catch(console.error);
