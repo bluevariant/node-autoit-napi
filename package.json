@@ -1,6 +1,6 @@
 {
   "name": "node-autoit-napi",
-  "version": "6.6.666",
+  "version": "6.6.666666",
   "description": "nodejs napi autoit(x) wrapper",
   "license": "996 license",
   "repository": {
@@ -21,14 +21,17 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "build-ts": "node tools/docs.js && ntsc -p ./ts"
+    "build-ts": "node tools/docs.js && ntsc --declaration -p ./ts"
   },
   "files": [
     "index.js",
     "wchar.js",
     "test.js",
+    "old.js",
     "ts/extend.js",
+    "ts/extend.d.ts",
     "ts/index.js",
+    "ts/index.d.ts",
     "AutoItX3.dll",
     "AutoItX3_x64.dll",
     "AutoItX3_DLL.h"
