@@ -6,10 +6,10 @@ export type Position = {
 };
 
 export type Rect = {
-  top: number;
-  right: number;
-  bottom: number;
-  left: number;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
 };
 
 export function cleanResult(result, targetType): any {
@@ -22,10 +22,10 @@ export function cleanResult(result, targetType): any {
 
   if (targetType === "Rect") {
     return {
-      top: result.top,
-      right: result.right,
-      bottom: result.bottom,
-      left: result.left,
+      x: result.left,
+      y: result.top,
+      width: result.right - result.left,
+      height: result.bottom - result.top,
     };
   }
 

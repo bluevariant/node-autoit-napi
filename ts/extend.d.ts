@@ -3,10 +3,10 @@ export declare type Position = {
     y: number;
 };
 export declare type Rect = {
-    top: number;
-    right: number;
-    bottom: number;
-    left: number;
+    x: number;
+    y: number;
+    width: number;
+    height: number;
 };
 export declare function cleanResult(result: any, targetType: any): any;
 export declare type RegExp = {

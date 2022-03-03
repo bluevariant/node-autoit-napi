@@ -10,10 +10,10 @@ function cleanResult(result, targetType) {
     }
     if (targetType === "Rect") {
         return {
-            top: result.top,
-            right: result.right,
-            bottom: result.bottom,
-            left: result.left,
+            x: result.left,
+            y: result.top,
+            width: result.right - result.left,
+            height: result.bottom - result.top,
         };
     }
     return result;
