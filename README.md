@@ -72,32 +72,32 @@ main().catch(console.error);
 
 ## <code>API</code>
 
-```
+```javascript
 async function init(): Promise<void>
 ```
 
-```
+```javascript
 async function error(): Promise<number>
 ```
 
-```
+```javascript
 async function autoItSetOption(
   option: string,
   value: number
 ): Promise<number>
 ```
 
-```
+```javascript
 async function clipGet(
   options: { bufSize?: number }
 ): Promise<string>
 ```
 
-```
+```javascript
 async function clipPut(clip: string): Promise<void>
 ```
 
-```
+```javascript
 async function controlClick(
   title: string,
   control: string,
@@ -111,7 +111,7 @@ async function controlClick(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function controlClickByHandle(
   wnd: number,
   ctrl: number,
@@ -119,7 +119,7 @@ async function controlClickByHandle(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function controlCommand(
   title: string,
   control: string,
@@ -128,7 +128,7 @@ async function controlCommand(
 ): Promise<string>
 ```
 
-```
+```javascript
 async function controlCommandByHandle(
   wnd: number,
   ctrl: number,
@@ -137,7 +137,7 @@ async function controlCommandByHandle(
 ): Promise<string>
 ```
 
-```
+```javascript
 async function controlListView(
   title: string,
   control: string,
@@ -151,7 +151,7 @@ async function controlListView(
 ): Promise<string>
 ```
 
-```
+```javascript
 async function controlListViewByHandle(
   wnd: number,
   ctrl: number,
@@ -160,7 +160,7 @@ async function controlListViewByHandle(
 ): Promise<string>
 ```
 
-```
+```javascript
 async function controlDisable(
   title: string,
   control: string,
@@ -168,14 +168,14 @@ async function controlDisable(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function controlDisableByHandle(
   wnd: number,
   ctrl: number
 ): Promise<number>
 ```
 
-```
+```javascript
 async function controlEnable(
   title: string,
   control: string,
@@ -183,14 +183,14 @@ async function controlEnable(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function controlEnableByHandle(
   wnd: number,
   ctrl: number
 ): Promise<number>
 ```
 
-```
+```javascript
 async function controlFocus(
   title: string,
   control: string,
@@ -198,35 +198,35 @@ async function controlFocus(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function controlFocusByHandle(
   wnd: number,
   ctrl: number
 ): Promise<number>
 ```
 
-```
+```javascript
 async function controlGetFocus(
   title: string,
   options: { text?: string; bufSize?: number }
 ): Promise<string>
 ```
 
-```
+```javascript
 async function controlGetFocusByHandle(
   wnd: number,
   options: { bufSize?: number }
 ): Promise<string>
 ```
 
-```
+```javascript
 async function controlGetHandle(
   wnd: number,
   control: string
 ): Promise<number>
 ```
 
-```
+```javascript
 async function controlGetHandleAsText(
   title: string,
   control: string,
@@ -234,7 +234,7 @@ async function controlGetHandleAsText(
 ): Promise<string>
 ```
 
-```
+```javascript
 async function controlGetPos(
   title: string,
   control: string,
@@ -242,14 +242,14 @@ async function controlGetPos(
 ): Promise<Rect>
 ```
 
-```
+```javascript
 async function controlGetPosByHandle(
   wnd: number,
   ctrl: number
 ): Promise<Rect>
 ```
 
-```
+```javascript
 async function controlGetText(
   title: string,
   control: string,
@@ -257,7 +257,7 @@ async function controlGetText(
 ): Promise<string>
 ```
 
-```
+```javascript
 async function controlGetTextByHandle(
   wnd: number,
   ctrl: number,
@@ -265,7 +265,7 @@ async function controlGetTextByHandle(
 ): Promise<string>
 ```
 
-```
+```javascript
 async function controlHide(
   title: string,
   control: string,
@@ -273,14 +273,14 @@ async function controlHide(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function controlHideByHandle(
   wnd: number,
   ctrl: number
 ): Promise<number>
 ```
 
-```
+```javascript
 async function controlMove(
   title: string,
   control: string,
@@ -290,7 +290,7 @@ async function controlMove(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function controlMoveByHandle(
   wnd: number,
   ctrl: number,
@@ -300,7 +300,7 @@ async function controlMoveByHandle(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function controlSend(
   title: string,
   control: string,
@@ -309,7 +309,7 @@ async function controlSend(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function controlSendByHandle(
   wnd: number,
   ctrl: number,
@@ -318,7 +318,7 @@ async function controlSendByHandle(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function controlSetText(
   title: string,
   control: string,
@@ -327,7 +327,7 @@ async function controlSetText(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function controlSetTextByHandle(
   wnd: number,
   ctrl: number,
@@ -335,7 +335,7 @@ async function controlSetTextByHandle(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function controlShow(
   title: string,
   control: string,
@@ -343,14 +343,14 @@ async function controlShow(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function controlShowByHandle(
   wnd: number,
   ctrl: number
 ): Promise<number>
 ```
 
-```
+```javascript
 async function controlTreeView(
   title: string,
   control: string,
@@ -364,7 +364,7 @@ async function controlTreeView(
 ): Promise<string>
 ```
 
-```
+```javascript
 async function controlTreeViewByHandle(
   wnd: number,
   ctrl: number,
@@ -373,7 +373,7 @@ async function controlTreeViewByHandle(
 ): Promise<string>
 ```
 
-```
+```javascript
 async function driveMapAdd(
   device: string,
   share: string,
@@ -382,22 +382,22 @@ async function driveMapAdd(
 ): Promise<string>
 ```
 
-```
+```javascript
 async function driveMapDel(device: string): Promise<number>
 ```
 
-```
+```javascript
 async function driveMapGet(
   device: string,
   options: { bufSize?: number }
 ): Promise<string>
 ```
 
-```
+```javascript
 async function isAdmin(): Promise<number>
 ```
 
-```
+```javascript
 async function mouseClick(
   options: {
     button?: string;
@@ -409,7 +409,7 @@ async function mouseClick(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function mouseClickDrag(
   button: string,
   x1: number,
@@ -420,21 +420,21 @@ async function mouseClickDrag(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function mouseDown(
   options: { button?: string }
 ): Promise<void>
 ```
 
-```
+```javascript
 async function mouseGetCursor(): Promise<number>
 ```
 
-```
+```javascript
 async function mouseGetPos(): Promise<Position>
 ```
 
-```
+```javascript
 async function mouseMove(
   x: number,
   y: number,
@@ -442,35 +442,35 @@ async function mouseMove(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function mouseUp(
   options: { button?: string }
 ): Promise<void>
 ```
 
-```
+```javascript
 async function mouseWheel(
   direction: string,
   clicks: number
 ): Promise<void>
 ```
 
-```
+```javascript
 async function opt(option: string, value: number): Promise<number>
 ```
 
-```
+```javascript
 async function pixelChecksum(
   lpRect: Rect,
   options: { step?: number }
 ): Promise<number>
 ```
 
-```
+```javascript
 async function pixelGetColor(x: number, y: number): Promise<number>
 ```
 
-```
+```javascript
 async function pixelSearch(
   lpRect: Rect,
   color: number,
@@ -478,50 +478,50 @@ async function pixelSearch(
 ): Promise<Position>
 ```
 
-```
+```javascript
 async function processClose(process: string): Promise<number>
 ```
 
-```
+```javascript
 async function processExists(process: string): Promise<number>
 ```
 
-```
+```javascript
 async function processSetPriority(
   process: string,
   priority: number
 ): Promise<number>
 ```
 
-```
+```javascript
 async function processWait(
   process: string,
   options: { timeout?: number }
 ): Promise<number>
 ```
 
-```
+```javascript
 async function processWaitClose(
   process: string,
   options: { timeout?: number }
 ): Promise<number>
 ```
 
-```
+```javascript
 async function run(
   program: string,
   options: { dir?: string; showFlag?: number }
 ): Promise<number>
 ```
 
-```
+```javascript
 async function runWait(
   program: string,
   options: { dir?: string; showFlag?: number }
 ): Promise<number>
 ```
 
-```
+```javascript
 async function runAs(
   user: string,
   domain: string,
@@ -532,7 +532,7 @@ async function runAs(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function runAsWait(
   user: string,
   domain: string,
@@ -543,202 +543,202 @@ async function runAsWait(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function send(
   sendText: string,
   options: { mode?: number }
 ): Promise<void>
 ```
 
-```
+```javascript
 async function shutdown(flags: number): Promise<number>
 ```
 
-```
+```javascript
 async function sleep(milliseconds: number): Promise<void>
 ```
 
-```
+```javascript
 async function statusbarGetText(
   title: string,
   options: { text?: string; part?: number; bufSize?: number }
 ): Promise<string>
 ```
 
-```
+```javascript
 async function statusbarGetTextByHandle(
   wnd: number,
   options: { part?: number; bufSize?: number }
 ): Promise<string>
 ```
 
-```
+```javascript
 async function toolTip(
   tip: string,
   options: { x?: number; y?: number }
 ): Promise<void>
 ```
 
-```
+```javascript
 async function winActivate(
   title: string,
   options: { text?: string }
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winActivateByHandle(wnd: number): Promise<number>
 ```
 
-```
+```javascript
 async function winActive(
   title: string,
   options: { text?: string }
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winActiveByHandle(wnd: number): Promise<number>
 ```
 
-```
+```javascript
 async function winClose(
   title: string,
   options: { text?: string }
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winCloseByHandle(wnd: number): Promise<number>
 ```
 
-```
+```javascript
 async function winExists(
   title: string,
   options: { text?: string }
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winExistsByHandle(wnd: number): Promise<number>
 ```
 
-```
+```javascript
 async function winGetCaretPos(): Promise<Position>
 ```
 
-```
+```javascript
 async function winGetClassList(
   title: string,
   options: { text?: string; bufSize?: number }
 ): Promise<string>
 ```
 
-```
+```javascript
 async function winGetClassListByHandle(
   wnd: number,
   options: { bufSize?: number }
 ): Promise<string>
 ```
 
-```
+```javascript
 async function winGetClientSize(
   title: string,
   options: { text?: string }
 ): Promise<Rect>
 ```
 
-```
+```javascript
 async function winGetClientSizeByHandle(wnd: number): Promise<Rect>
 ```
 
-```
+```javascript
 async function winGetHandle(
   title: string,
   options: { text?: string }
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winGetHandleAsText(
   title: string,
   options: { text?: string; bufSize?: number }
 ): Promise<string>
 ```
 
-```
+```javascript
 async function winGetPos(
   title: string,
   options: { text?: string }
 ): Promise<Rect>
 ```
 
-```
+```javascript
 async function winGetPosByHandle(wnd: number): Promise<Rect>
 ```
 
-```
+```javascript
 async function winGetProcess(
   title: string,
   options: { text?: string }
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winGetProcessByHandle(wnd: number): Promise<number>
 ```
 
-```
+```javascript
 async function winGetState(
   title: string,
   options: { text?: string }
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winGetStateByHandle(wnd: number): Promise<number>
 ```
 
-```
+```javascript
 async function winGetText(
   title: string,
   options: { text?: string; bufSize?: number }
 ): Promise<string>
 ```
 
-```
+```javascript
 async function winGetTextByHandle(
   wnd: number,
   options: { bufSize?: number }
 ): Promise<string>
 ```
 
-```
+```javascript
 async function winGetTitle(
   title: string,
   options: { text?: string; bufSize?: number }
 ): Promise<string>
 ```
 
-```
+```javascript
 async function winGetTitleByHandle(
   wnd: number,
   options: { bufSize?: number }
 ): Promise<string>
 ```
 
-```
+```javascript
 async function winKill(
   title: string,
   options: { text?: string }
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winKillByHandle(wnd: number): Promise<number>
 ```
 
-```
+```javascript
 async function winMenuSelectItem(
   title: string,
   item1: string,
@@ -755,7 +755,7 @@ async function winMenuSelectItem(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winMenuSelectItemByHandle(
   wnd: number,
   item1: string,
@@ -771,15 +771,15 @@ async function winMenuSelectItemByHandle(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winMinimizeAll(): Promise<void>
 ```
 
-```
+```javascript
 async function winMinimizeAllUndo(): Promise<void>
 ```
 
-```
+```javascript
 async function winMove(
   title: string,
   x: number,
@@ -788,7 +788,7 @@ async function winMove(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winMoveByHandle(
   wnd: number,
   x: number,
@@ -797,7 +797,7 @@ async function winMoveByHandle(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winSetOnTop(
   title: string,
   flag: number,
@@ -805,14 +805,14 @@ async function winSetOnTop(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winSetOnTopByHandle(
   wnd: number,
   flag: number
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winSetState(
   title: string,
   flags: number,
@@ -820,14 +820,14 @@ async function winSetState(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winSetStateByHandle(
   wnd: number,
   flags: number
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winSetTitle(
   title: string,
   newTitle: string,
@@ -835,14 +835,14 @@ async function winSetTitle(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winSetTitleByHandle(
   wnd: number,
   newTitle: string
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winSetTrans(
   title: string,
   trans: number,
@@ -850,70 +850,70 @@ async function winSetTrans(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winSetTransByHandle(
   wnd: number,
   trans: number
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winWait(
   title: string,
   options: { text?: string; timeout?: number }
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winWaitByHandle(
   wnd: number,
   options: { timeout?: number }
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winWaitActive(
   title: string,
   options: { text?: string; timeout?: number }
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winWaitActiveByHandle(
   wnd: number,
   options: { timeout?: number }
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winWaitClose(
   title: string,
   options: { text?: string; timeout?: number }
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winWaitCloseByHandle(
   wnd: number,
   options: { timeout?: number }
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winWaitNotActive(
   title: string,
   options: { text?: string; timeout?: number }
 ): Promise<number>
 ```
 
-```
+```javascript
 async function winWaitNotActiveByHandle(
   wnd: number,
   options: { timeout?: number }
 ): Promise<number>
 ```
 
-```
+```javascript
 async function postMessage(
   wnd: number,
   msg: number,
@@ -921,7 +921,7 @@ async function postMessage(
 ): Promise<number>
 ```
 
-```
+```javascript
 async function sendMessage(
   wnd: number,
   msg: number,

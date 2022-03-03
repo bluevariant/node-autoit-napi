@@ -176,7 +176,7 @@ const docs = code
   .filter((v) => v.startsWith("async"))
   .map((v) => v.split("> {")[0].trim() + ">")
   .map((v) => v.replace("} = {}", "}"))
-  .map((v) => "```\n" + v + "\n```")
+  .map((v) => "```javascript\n" + v + "\n```")
   .join("\n\n");
 const readmeFile = path.join(__dirname, "../README.md");
 const readme =
