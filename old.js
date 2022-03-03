@@ -4,18 +4,31 @@ var path = require("path");
 var fs = require("fs");
 
 function getFile(filename) {
-  // for pkg
   var dir = process.cwd();
   var target = path.join(dir, filename);
+  var result;
 
   if (fs.existsSync(target)) {
-    return target;
+    result = target;
+  } else {
+    result = path.join(__dirname, filename);
   }
 
-  return path.join(__dirname, filename);
+  // check if pkg
+  if (filename.endsWith(".dll") && process.pkg && process.pkg.entrypoint) {
+    var dir2 = path.dirname(process.execPath);
+    var physicsFile = path.join(dir2, filename);
+
+    if (!fs.existsSync(physicsFile)) {
+      fs.writeFileSync(physicsFile, fs.readFileSync(result));
+    }
+
+    return physicsFile;
+  }
+
+  return result;
 }
 
-var workingDir = __dirname;
 var ref = require('ref-napi');
 var ffi = require('ffi-napi');
 var os = require('os');

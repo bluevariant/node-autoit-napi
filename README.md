@@ -11,10 +11,23 @@
 
 ## <code>How to install</code>
 
-```
+```shell
 npm i node-autoit-napi
-// or
+# or
 yarn add node-autoit-napi
+```
+```shell
+# config @vercel/pkg
+{
+  "pkg": {
+    "assets": [
+        "node_modules/ref-napi/**/*.node",
+        "node_modules/node-autoit-napi/**/*.dll",
+        "node_modules/ref-struct-napi/**/*.node",
+        "node_modules/ffi-napi/**/*.node"
+    ],
+  }
+}
 ```
 
 ## <code>Compatibility with @xhawk18 version</code>
