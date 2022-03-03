@@ -1,6 +1,6 @@
 {
   "name": "node-autoit-napi",
-  "version": "6.66.666666",
+  "version": "6.666.666666",
   "description": "nodejs napi autoit(x) wrapper",
   "license": "996 license",
   "repository": {
