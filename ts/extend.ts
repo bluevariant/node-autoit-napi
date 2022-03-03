@@ -106,7 +106,11 @@ export class TitleBuilder {
   }
 
   build(): string {
-    return `[${this.data.join("; ")}]`;
+    const title = `[${this.data.join("; ")}]`;
+
+    this.data = [];
+
+    return title;
   }
 }
 

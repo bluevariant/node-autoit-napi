@@ -70,7 +70,9 @@ var TitleBuilder = (function () {
         return this;
     };
     TitleBuilder.prototype.build = function () {
-        return "[" + this.data.join("; ") + "]";
+        var title = "[" + this.data.join("; ") + "]";
+        this.data = [];
+        return title;
     };
     return TitleBuilder;
 }());
