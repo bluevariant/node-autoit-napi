@@ -17,7 +17,7 @@ THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  * Module dependencies.
  */
 
-var ref = require('ref');
+var ref = require('ref-napi');
 //var Iconv = require('iconv').Iconv;
 var iconv = require('iconv-lite');
 
