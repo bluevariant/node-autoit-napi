@@ -17,16 +17,14 @@ npm i node-autoit-napi
 yarn add node-autoit-napi
 ```
 ```shell
-# config @vercel/pkg
-{
-  "pkg": {
+# If you are using @vercel/pkg add to package.json following configs:
+"pkg": {
     "assets": [
         "node_modules/ref-napi/**/*.node",
         "node_modules/node-autoit-napi/**/*.dll",
         "node_modules/ref-struct-napi/**/*.node",
         "node_modules/ffi-napi/**/*.node"
     ],
-  }
 }
 ```
 
