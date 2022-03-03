@@ -1,11 +1,11 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var _ = require("lodash");
 function cleanResult(result, targetType) {
     if (targetType === "Position") {
         return {
             x: result.x,
-            y: result.y
+            y: result.y,
         };
     }
     if (targetType === "Rect") {
@@ -13,7 +13,7 @@ function cleanResult(result, targetType) {
             top: result.top,
             right: result.right,
             bottom: result.bottom,
-            left: result.left
+            left: result.left,
         };
     }
     return result;
@@ -23,7 +23,7 @@ var TitleBuilder = (function () {
     function TitleBuilder() {
         this.data = [];
     }
-    TitleBuilder.prototype["class"] = function (value, caseless) {
+    TitleBuilder.prototype.class = function (value, caseless) {
         return this.some("CLASS", value, caseless);
     };
     TitleBuilder.prototype.title = function (title, caseless) {
@@ -79,3 +79,8 @@ function titleBuilder() {
     return new TitleBuilder();
 }
 exports.titleBuilder = titleBuilder;
+exports.titbI = {
+    get titb() {
+        return titleBuilder();
+    },
+};

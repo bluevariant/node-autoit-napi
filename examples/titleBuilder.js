@@ -1,7 +1,6 @@
 const autoit = require("../index");
 
-const untitledNotepadTile = autoit
-  .titleBuilder()
+const untitledNotepadTile = autoit.titb
   .title({
     endsWith: "- Notepad",
     startsWith: "Untitled -",

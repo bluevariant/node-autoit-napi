@@ -26,3 +26,6 @@ export declare class TitleBuilder {
     build(): string;
 }
 export declare function titleBuilder(): TitleBuilder;
+export declare const titbI: {
+    readonly titb: TitleBuilder;
+};

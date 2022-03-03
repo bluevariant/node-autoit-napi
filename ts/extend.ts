@@ -113,3 +113,9 @@ export class TitleBuilder {
 export function titleBuilder() {
   return new TitleBuilder();
 }
+
+export const titbI = {
+  get titb(): TitleBuilder {
+    return titleBuilder();
+  },
+};

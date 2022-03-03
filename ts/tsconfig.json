@@ -15,6 +15,7 @@
   },
   "compilerOptions": {
     // typescript options here
-    "lib": ["es2015"]
+    "lib": ["es2015"],
+    "target": "es5"
   }
 }
